@@ -1,0 +1,311 @@
+:root {
+  --button: #ff0000;
+  --main-background: #c4c4c4;
+  --background: #e5e5e5;
+  --text: #000;
+  --text-description: #9c9696;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  -webkit-font-smoothig: antialiased;
+}
+
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+header {
+  max-width: 1320px;
+  margin: 0 60px;
+  padding-top: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 90px;
+}
+
+header #menu li a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text);
+  text-transform: uppercase;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+header #menu li a:hover {
+  color: var(--button);
+  text-decoration: underline;
+}
+
+header #search-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+}
+
+header #search-product form .input-group {
+  position: relative;
+  height: 100%;
+}
+
+header #search-product form .input-group input {
+  padding-left: 42px;
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid var(--background);
+  border-radius: 0.25rem;
+}
+
+header #search-product form img {
+  position: absolute;
+  top: 7px;
+  left: 13px;
+  margin-right: 5px;
+}
+
+main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #about {
+  max-width: 358px;
+  height: 100%;
+  margin: 85px 69px 100px;
+}
+
+main #about .container .text {
+  text-align: left;
+  font-weight: bold;
+}
+
+main #about .container .text h1 {
+  font-size: 60px;
+}
+
+main #about .container .text p {
+  margin: 20px 0;
+  font-size: 18px;
+  color: var(--text-description);
+}
+
+main #about .container .text span {
+  font-size: 40px;
+}
+
+main #about .container a {
+  height: 90px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--button);
+  border-radius: 0.25rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main #about .container a:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+main #product {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background: var(--main-background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #product .preview {
+  width: 100%;
+  height: 100%;
+  background: url("../assets/tenis-1-ampliado.png") no-repeat center/contain;
+}
+
+main #product .images {
+  padding: 5px 18px 40px;
+}
+
+main #product .images #photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 37px;
+}
+
+main #product .images #photos li.selected {
+  border-bottom: 5px solid var(--button);
+}
+
+main #product .images #photos img {
+  border-radius: 0.25rem;
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 90px;
+}
+
+footer nav ul li a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+footer #explorer-more {
+  padding: 72px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+}
+
+footer #explorer-more a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+:is(footer nav, #explorer-more) a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */

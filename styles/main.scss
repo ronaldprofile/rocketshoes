@@ -1,0 +1,279 @@
+@import "reset";
+
+header {
+  max-width: 1320px;
+  margin: 0 60px;
+  padding-top: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  #menu {
+    display: flex;
+    align-items: center;
+
+    gap: 90px;
+
+    li a {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--text);
+      text-transform: uppercase;
+      transition: 0.2s;
+
+      &:hover {
+        color: var(--button);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #search-product {
+    display: flex;
+    gap: 80px;
+
+    form {
+      .input-group {
+        position: relative;
+        height: 100%;
+
+        input {
+          padding-left: 42px;
+          height: 100%;
+          width: 100%;
+
+          font-size: 1rem;
+          border: 1px solid var(--background);
+          border-radius: 0.25rem;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 7px;
+        left: 13px;
+
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+
+  #about {
+    max-width: 358px;
+    height: 100%;
+
+    margin: 85px 69px 100px;
+
+    .container {
+      .text {
+        text-align: left;
+        font-weight: bold;
+
+        h1 {
+          font-size: 60px;
+        }
+
+        p {
+          margin: 20px 0;
+          font-size: 18px;
+          color: var(--text-description);
+        }
+
+        span {
+          font-size: 40px;
+        }
+      }
+
+      a {
+        height: 90px;
+        margin-top: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        text-transform: uppercase;
+        color: #ffffff;
+        background: var(--button);
+
+        border-radius: 0.25rem;
+        transition: 0.2s;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+
+  #product {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background: var(--main-background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .preview {
+      width: 100%;
+      height: 100%;
+      background: url("../assets/tenis-1-ampliado.png") no-repeat center/contain;
+    }
+
+    .images {
+      padding: 5px 18px 40px;
+
+      #photos {
+        display: flex;
+        align-items: center;
+        gap: 37px;
+
+        li.selected {
+          border-bottom: 5px solid var(--button);
+        }
+
+        img {
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+
+    li a {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--text);
+      transition: 0.2s;
+    }
+  }
+
+  #explorer-more {
+    padding: 72px 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+:is(footer nav, #explorer-more) a:hover {
+  text-decoration: underline;
+}
+
+// @media (max-width: 768px) {
+//   header {
+//     margin: 0 30px;
+//   }
+
+//   header nav {
+//     display: none;
+//   }
+
+//   #search-product {
+//     gap: 30px;
+//   }
+
+//   main {
+//     flex-direction: column;
+//   }
+
+//   main #about {
+//   }
+
+//   main #product {
+//     position: static;
+//   }
+
+//   main #product #photos {
+//     flex-wrap: wrap;
+//   }
+//   footer {
+//     padding-top: 2rem;
+//     display: block;
+//   }
+//   footer #video-preview {
+//     margin-left: 1.125rem;
+//   }
+//   footer nav {
+//     margin: 2rem 1.125rem 2rem;
+//   }
+//   footer #explorer-more {
+//     padding: 1.5rem;
+//   }
+//   footer #explorer-more a {
+//     font-size: 1.125rem;
+//   }
+// }
+
+// @media (max-width: 425px) {
+//   main #about .text {
+//     text-align: center;
+//   }
+//   main #about .text h1 {
+//     font-size: 38px;
+//   }
+//   main #about .text p {
+//     font-size: 14px;
+//   }
+//   main #about .text span {
+//     font-size: 24px;
+//   }
+
+//   main #about a {
+//     font-size: 1.125rem;
+//   }
+//   main #product .preview {
+//     display: none;
+//   }
+//   footer nav {
+//     margin-left: 1.125rem;
+//   }
+//   footer nav ul {
+//     display: block;
+//   }
+//   footer nav ul li + li {
+//     margin-top: 2rem;
+//   }
+// }
